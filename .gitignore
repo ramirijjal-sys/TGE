@@ -1,0 +1,8 @@
+﻿*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+~$*
+website/_*.py
+website/_*.ps1
+website/_push_log.txt
