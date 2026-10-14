@@ -2,9 +2,13 @@
 
 Design-only bilingual (AR/EN) website based on the TGE Business Requirements Document.
 
+## Live demo (GitHub Pages)
+
+https://ramirijjal-sys.github.io/TGE/
+
 ## Open locally
 
-Open `website/index.html` in a browser.
+Open `website/index.html` or `docs/index.html` in a browser.
 
 ## Features (mock)
 
@@ -13,4 +17,6 @@ Open `website/index.html` in a browser.
 - Public certificate QR verify
 - Full sitemap of BRD screens
 
-Remote: https://github.com/ramirijjal-sys/TGE.git
+## GitHub Pages setup
+
+Repo Settings â†’ Pages â†’ Deploy from branch â†’ `main` / `/docs`

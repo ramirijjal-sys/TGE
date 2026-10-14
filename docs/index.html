@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TGE — منصة التشجير وأرصدة الكربون</title>
+  <meta name="description" content="منصة TGE لتوثيق التشجير وإصدار شهادات الكربون — تصميم حسب وثيقة متطلبات الأعمال" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="#" data-go="landing">
+      <span class="nav__mark">TGE</span>
+      <span data-i18n="brand">منصة TGE</span>
+    </a>
+    <nav class="nav__links" id="topLinks">
+      <button type="button" data-go="landing" data-i18n="nav.home">الرئيسية</button>
+      <button type="button" data-go="sitemap" data-i18n="nav.sitemap">خريطة الصفحات</button>
+      <button type="button" data-go="verify" data-i18n="nav.verify">تحقق الشهادة</button>
+      <button type="button" data-go="offsetter" data-i18n="nav.offset">المعوِّض</button>
+      <button type="button" data-go="landowner" data-i18n="nav.land">صاحب الأرض</button>
+      <button type="button" data-go="nursery" data-i18n="nav.nursery">المشتل</button>
+      <button type="button" data-go="admin" data-i18n="nav.admin">الإدارة</button>
+      <button type="button" data-go="auditor" data-i18n="nav.auditor">المدقق</button>
+    </nav>
+    <div class="nav__actions">
+      <button type="button" class="lang-btn" id="langToggle">EN</button>
+      <button type="button" class="btn btn--soft btn--sm" data-go="auth" data-i18n="nav.login">دخول</button>
+    </div>
+  </header>
+
+  <!-- ========== LANDING ========== -->
+  <section class="view is-active" id="view-landing">
+    <div class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__trees" aria-hidden="true">
+        <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 20 L130 95 H70 Z" fill="rgba(61,214,140,0.45)"/>
+          <path d="M100 55 L145 145 H55 Z" fill="rgba(25,168,111,0.5)"/>
+          <path d="M100 95 L160 200 H40 Z" fill="rgba(13,122,84,0.55)"/>
+          <rect x="94" y="175" width="12" height="40" rx="2" fill="rgba(255,255,255,0.25)"/>
+        </svg>
+      </div>
+      <div class="hero__inner">
+        <div class="hero__brand">TGE</div>
+        <span class="hero__eyebrow" data-i18n="hero.eyebrow">وثيقة متطلبات الأعمال · تصميم واجهات</span>
+        <h1 data-i18n="hero.title">تشجير موثّق. كربون قابل للتحقق.</h1>
+        <p data-i18n="hero.sub">المنصة لا تبيع أرضًا ولا توكنات. تشجّر أرضًا معتمدة، تستلم توكنًا لكل شجرة مزروعة، ثم شهادة تشجير فشهادة كربون.</p>
+        <div class="hero__cta">
+          <button type="button" class="btn btn--primary" data-go="auth" data-i18n="hero.cta1">ابدأ كمعوِّض</button>
+          <button type="button" class="btn btn--ghost" data-go="offsetter" data-i18n="hero.cta2">استكشف الفرص</button>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"></div>
+    </div>
+
+    <div class="section section--band">
+      <div class="section__inner">
+        <div class="promise">
+          <div>
+            <h2 class="section__h" data-i18n="promise.title">ازرع أولًا. التوكن يأتي بعد التحقق.</h2>
+            <p class="section__s" data-i18n="promise.sub">حسب متطلبات الأعمال: لا سكّ قبل اعتماد الزراعة. الأرض تبقى لصاحبها، والمعوِّض يحصل على حق الكربون عبر توكنات الأشجار.</p>
+            <button type="button" class="btn btn--primary" data-go="auth" data-i18n="promise.cta">جرّب مسار المعوِّض</button>
+          </div>
+          <div class="promise__visual" aria-hidden="true">
+            <span class="promise__chip promise__chip--1" data-i18n="promise.chip1">ERC-1155 · شجرة</span>
+            <span class="promise__chip promise__chip--2" data-i18n="promise.chip2">شهادة كربون</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section__h" data-i18n="roles.title">أدوار تشغيلية</h2>
+      <p class="section__s" data-i18n="roles.sub">كل المستخدمين يمرّون بتحقق OTP عبر الإيميل. الصلاحيات تختلف حسب الدور.</p>
+      <div class="roles">
+        <article class="role">
+          <div class="role__ico">1</div>
+          <h3 data-i18n="roles.land.h">صاحب الأرض</h3>
+          <p data-i18n="roles.land.p">يسجّل أرضًا قابلة للتشجير ويتابع حالتها. الأرض تبقى ملكه.</p>
+        </article>
+        <article class="role">
+          <div class="role__ico">2</div>
+          <h3 data-i18n="roles.off.h">المعوِّض</h3>
+          <p data-i18n="roles.off.p">يطلب تشجير أرض معتمدة، يستلم التوكنات والشهادات، ويتداول في السوق الثانوية.</p>
+        </article>
+        <article class="role">
+          <div class="role__ico">3</div>
+          <h3 data-i18n="roles.nur.h">المشتل</h3>
+          <p data-i18n="roles.nur.p">يعرض الأشجار المتاحة ويقبل طلبات التوريد ويحدّث حالة التسليم.</p>
+        </article>
+        <article class="role">
+          <div class="role__ico">4</div>
+          <h3 data-i18n="roles.adm.h">الأدمن (TGE)</h3>
+          <p data-i18n="roles.adm.p">يعتمد المستخدمين والأراضي والزراعة، ويصدر التوكنات ويدير المنصة.</p>
+        </article>
+        <article class="role">
+          <div class="role__ico">5</div>
+          <h3 data-i18n="roles.aud.h">المدقق</h3>
+          <p data-i18n="roles.aud.p">يراجع الأراضي المزروعة ويحدّث عدد الأشجار وأرصدة الكربون.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <h2 class="section__h" data-i18n="flow.title">دورة التشجير باختصار</h2>
+      <p class="section__s" data-i18n="flow.sub">لا يُصدر أي توكن أو شهادة قبل اعتماد الزراعة.</p>
+      <div class="flow">
+        <div class="flow__step"><span data-i18n="flow.1">تسجيل وتحقق OTP</span></div>
+        <div class="flow__step"><span data-i18n="flow.2">تسجيل واعتماد الأرض</span></div>
+        <div class="flow__step"><span data-i18n="flow.3">طلب تشجير</span></div>
+        <div class="flow__step"><span data-i18n="flow.4">توريد من المشتل</span></div>
+        <div class="flow__step"><span data-i18n="flow.5">زراعة + توكنات</span></div>
+        <div class="flow__step"><span data-i18n="flow.6">شهادات + سوق ثانوية</span></div>
+      </div>
+      <div class="note">
+        <strong data-i18n="note.h">خارج النطاق</strong>
+        <span data-i18n="note.p">المنصة لا تبيع الأراضي أو أجزاء منها، ولا تبيع التوكنات للمعوِّضين مباشرة (لا سوق أولية). التداول بين المستخدمين فقط عبر السوق الثانوية.</span>
+      </div>
+      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+        <button type="button" class="btn btn--soft" data-go="sitemap" data-i18n="landing.sitemap">تصفّح كل الصفحات</button>
+        <button type="button" class="btn btn--ghost" data-go="verify" data-i18n="landing.verify">تحقق من شهادة QR</button>
+      </div>
+    </div>
+    <footer class="footer" data-i18n="footer">تصميم واجهات فقط · حسب وثيقة متطلبات الأعمال — منصة TGE</footer>
+  </section>
+
+  <!-- ========== AUTH ========== -->
+  <section class="view" id="view-auth">
+    <div class="auth">
+      <!-- Step 1: register / login -->
+      <div class="auth__card" data-panel-id="auth-login">
+        <div class="steps">
+          <span class="is-on" data-i18n="auth.step1">1 · الحساب</span>
+          <span data-i18n="auth.step2">2 · OTP</span>
+          <span data-i18n="auth.step3">3 · المحفظة</span>
+        </div>
+        <h1 data-i18n="auth.title">تسجيل / دخول</h1>
+        <p class="muted" data-i18n="auth.sub">تحقق OTP عبر الإيميل · بدون نفاذ/واثق في المرحلة الأولى</p>
+        <div class="role-pick">
+          <label><input type="radio" name="role" value="offsetter" checked /> <span data-i18n="auth.role.off">معوِّض</span></label>
+          <label><input type="radio" name="role" value="landowner" /> <span data-i18n="auth.role.land">صاحب أرض</span></label>
+          <label><input type="radio" name="role" value="nursery" /> <span data-i18n="auth.role.nur">مشتل</span></label>
+          <label><input type="radio" name="role" value="admin" /> <span data-i18n="auth.role.adm">أدمن</span></label>
+          <label><input type="radio" name="role" value="auditor" /> <span data-i18n="auth.role.aud">مدقق</span></label>
+        </div>
+        <div class="field">
+          <label data-i18n="auth.email">البريد الإلكتروني</label>
+          <input type="email" placeholder="name@company.com" value="demo@tge.sa" />
+        </div>
+        <div class="field">
+          <label data-i18n="auth.type">نوع الحساب</label>
+          <select>
+            <option data-i18n="auth.ind">فرد</option>
+            <option data-i18n="auth.org">جهة / شركة</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--primary btn--block" id="doLogin" data-i18n="auth.cta">إرسال رمز OTP</button>
+        <p class="auth__fine" data-i18n="auth.fine">بعد OTP: فحوصات AML وربط المحفظة (MetaMask) قبل العمليات.</p>
+      </div>
+
+      <!-- Step 2: OTP -->
+      <div class="auth__card" data-panel-id="auth-otp" hidden>
+        <div class="steps">
+          <span class="is-done" data-i18n="auth.step1">1 · الحساب</span>
+          <span class="is-on" data-i18n="auth.step2">2 · OTP</span>
+          <span data-i18n="auth.step3">3 · المحفظة</span>
+        </div>
+        <h1 data-i18n="auth.otp.title">تحقق الرمز</h1>
+        <p class="muted" data-i18n="auth.otp.sub">أدخل الرمز المرسل إلى demo@tge.sa</p>
+        <div class="field">
+          <label data-i18n="auth.otp.code">رمز OTP</label>
+          <input type="text" maxlength="6" placeholder="123456" value="482910" style="letter-spacing:.35em;font-weight:800;font-size:1.25rem;text-align:center" />
+        </div>
+        <button type="button" class="btn btn--primary btn--block" id="doOtp" data-i18n="auth.otp.cta">تأكيد والمتابعة</button>
+        <button type="button" class="btn btn--ghost btn--block" data-panel-target="auth-login" data-i18n="auth.otp.back" style="margin-top:8px">رجوع</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WALLET ========== -->
+  <section class="view" id="view-wallet">
+    <div class="auth">
+      <div class="auth__card" style="max-width:480px">
+        <div class="steps">
+          <span class="is-done" data-i18n="auth.step1">1 · الحساب</span>
+          <span class="is-done" data-i18n="auth.step2">2 · OTP</span>
+          <span class="is-on" data-i18n="auth.step3">3 · المحفظة</span>
+        </div>
+        <h1 data-i18n="wallet.title">ربط المحفظة والدفع</h1>
+        <p class="muted" data-i18n="wallet.sub">MetaMask مطلوبة للعمليات على السلسلة. اختر طريقة الدفع للرسوم.</p>
+        <div class="wallet-box">
+          <div>
+            <div style="font-size:.8rem;opacity:.7;margin-bottom:4px" data-i18n="wallet.mm">MetaMask</div>
+            <code id="walletAddr">0x3a…9f2c</code>
+          </div>
+          <button type="button" class="btn btn--primary btn--sm" id="connectWallet" data-i18n="wallet.connect">ربط المحفظة</button>
+        </div>
+        <p style="font-weight:700;margin:0 0 8px" data-i18n="wallet.pay">طريقة الدفع</p>
+        <div class="pay-pick">
+          <label>
+            <input type="radio" name="pay" value="gateway" checked />
+            <span data-i18n="wallet.gateway">بوابة دفع</span>
+            <small data-i18n="wallet.gateway.s">بطاقة / تحويل</small>
+          </label>
+          <label>
+            <input type="radio" name="pay" value="wallet" />
+            <span data-i18n="wallet.onchain">محفظة</span>
+            <small data-i18n="wallet.onchain.s">دفع على السلسلة</small>
+          </label>
+        </div>
+        <button type="button" class="btn btn--primary btn--block" id="walletContinue" data-i18n="wallet.continue">متابعة إلى اللوحة</button>
+        <button type="button" class="btn btn--ghost btn--block" id="walletSkip" data-i18n="wallet.skip" style="margin-top:8px">تخطّي الآن (تصميم)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VERIFY CERTIFICATE ========== -->
+  <section class="view" id="view-verify">
+    <div class="verify-hero">
+      <div class="verify-card">
+        <h1 data-i18n="verify.title">تحقق من الشهادة</h1>
+        <p class="muted" data-i18n="verify.sub">امسح رمز QR أو أدخل رقم الشهادة للتحقق العام.</p>
+        <div class="big-qr" title="QR"></div>
+        <div class="field" style="text-align:start">
+          <label data-i18n="verify.id">رقم الشهادة</label>
+          <input type="text" value="TGE-PC-2026-1038" />
+        </div>
+        <button type="button" class="btn btn--primary btn--block" id="doVerify" data-i18n="verify.cta">تحقق</button>
+        <div id="verifyResult" hidden>
+          <div class="detail-grid">
+            <div><div class="k" data-i18n="verify.type">النوع</div><div class="v" data-i18n="verify.type.v">شهادة تشجير</div></div>
+            <div><div class="k" data-i18n="verify.status">الحالة</div><div class="v" data-i18n="st.approved">معتمدة</div></div>
+            <div><div class="k" data-i18n="th.land">الأرض</div><div class="v" data-i18n="land.ahsa">واحة الأحساء</div></div>
+            <div><div class="k" data-i18n="th.trees">أشجار</div><div class="v">1,500</div></div>
+          </div>
+          <p style="margin:16px 0 0;font-size:.85rem;color:var(--slate)" data-i18n="verify.ok">الشهادة صالحة ومرتبطة بتوكنات ERC-1155.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SITEMAP ========== -->
+  <section class="view" id="view-sitemap">
+    <div class="sitemap">
+      <h2 data-i18n="sitemap.title">خريطة الصفحات</h2>
+      <p data-i18n="sitemap.sub">كل شاشات التصميم حسب وثيقة متطلبات الأعمال — تنقّل سريع.</p>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="sitemap.public">عام / مشترك</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="landing"><span data-i18n="nav.home">الرئيسية</span><small data-i18n="sitemap.landing">الصفحة التعريفية</small></button>
+        <button type="button" data-go="auth"><span data-i18n="nav.login">دخول</span><small data-i18n="sitemap.auth">تسجيل + اختيار دور</small></button>
+        <button type="button" data-go="wallet"><span data-i18n="sitemap.wallet">المحفظة والدفع</span><small>MetaMask</small></button>
+        <button type="button" data-go="verify"><span data-i18n="nav.verify">تحقق الشهادة</span><small>QR</small></button>
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="nav.offset">المعوِّض</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="offsetter" data-panel-target="off-dash"><span data-i18n="off.nav.dash">لوحة المعلومات</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-lands"><span data-i18n="off.nav.lands">فرص التشجير</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-request"><span data-i18n="off.nav.req">طلب تشجير</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-reqs"><span data-i18n="off.nav.reqs">طلباتي</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-detail"><span data-i18n="off.nav.detail">تفاصيل الطلب</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-certs"><span data-i18n="off.nav.certs">الشهادات</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-market"><span data-i18n="off.nav.market">السوق الثانوية</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-sell"><span data-i18n="off.nav.sell">عرض للبيع</span></button>
+        <button type="button" data-go="offsetter" data-panel-target="off-profile"><span data-i18n="off.nav.profile">الملف والإشعارات</span></button>
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="nav.land">صاحب الأرض</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="landowner" data-panel-target="lo-lands"><span data-i18n="lo.nav.lands">أراضيّ</span></button>
+        <button type="button" data-go="landowner" data-panel-target="lo-new"><span data-i18n="lo.nav.new">تسجيل أرض</span></button>
+        <button type="button" data-go="landowner" data-panel-target="lo-detail"><span data-i18n="lo.nav.detail">تفاصيل الأرض</span></button>
+        <button type="button" data-go="landowner" data-panel-target="lo-notif"><span data-i18n="lo.nav.notif">الإشعارات</span></button>
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="nav.nursery">المشتل</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="nursery" data-panel-target="nu-stock"><span data-i18n="nu.nav.stock">المخزون</span></button>
+        <button type="button" data-go="nursery" data-panel-target="nu-species"><span data-i18n="nu.nav.species">إضافة / تعديل نوع</span></button>
+        <button type="button" data-go="nursery" data-panel-target="nu-orders"><span data-i18n="nu.nav.orders">طلبات التوريد</span></button>
+        <button type="button" data-go="nursery" data-panel-target="nu-delivery"><span data-i18n="nu.nav.delivery">حالة التسليم</span></button>
+        <button type="button" data-go="nursery" data-panel-target="nu-proof"><span data-i18n="nu.nav.proof">إثبات الزراعة</span></button>
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="nav.admin">الإدارة</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="admin" data-panel-target="ad-queue"><span data-i18n="ad.nav.queue">طابور الاعتماد</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-users"><span data-i18n="ad.nav.users">المستخدمون</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-lands"><span data-i18n="ad.nav.lands">الأراضي</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-assign"><span data-i18n="ad.nav.assign">تعيين مشتل</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-market"><span data-i18n="ad.nav.market">ضوابط السوق</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-audits"><span data-i18n="ad.nav.audits">التدقيق</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-reports"><span data-i18n="ad.nav.reports">التقارير</span></button>
+        <button type="button" data-go="admin" data-panel-target="ad-settings"><span data-i18n="ad.nav.settings">إعدادات المنصة</span></button>
+      </div>
+
+      <h3 style="margin:24px 0 10px;font-size:.95rem;color:var(--slate)" data-i18n="nav.auditor">المدقق</h3>
+      <div class="sitemap__grid">
+        <button type="button" data-go="auditor" data-panel-target="au-pending"><span data-i18n="au.nav.pending">أراضٍ بانتظار التدقيق</span></button>
+        <button type="button" data-go="auditor" data-panel-target="au-submit"><span data-i18n="au.nav.submit">تحديث تدقيق</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OFFSETTER ========== -->
+  <section class="view" id="view-offsetter">
+    <div class="app-shell">
+      <aside class="side">
+        <div class="side__user">
+          <strong data-i18n="off.user">شركة النور</strong>
+          <span data-i18n="off.role">معوِّض · معتمد</span>
+        </div>
+        <button type="button" class="is-on" data-panel-target="off-dash" data-i18n="off.nav.dash">لوحة المعلومات</button>
+        <button type="button" data-panel-target="off-lands" data-i18n="off.nav.lands">فرص التشجير</button>
+        <button type="button" data-panel-target="off-request" data-i18n="off.nav.req">طلب تشجير</button>
+        <button type="button" data-panel-target="off-reqs" data-i18n="off.nav.reqs">طلباتي</button>
+        <button type="button" data-panel-target="off-certs" data-i18n="off.nav.certs">الشهادات</button>
+        <button type="button" data-panel-target="off-market" data-i18n="off.nav.market">السوق الثانوية</button>
+        <button type="button" data-panel-target="off-profile" data-i18n="off.nav.profile">الملف والإشعارات</button>
+      </aside>
+      <div class="main">
+        <div data-panel-id="off-dash">
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.dash.h">لوحة المعوِّض</h1>
+              <p data-i18n="off.dash.s">أشجارك الموثّقة وأثر الكربون — بعد اعتماد الزراعة فقط.</p>
+            </div>
+            <button type="button" class="btn btn--primary btn--sm" data-panel-target="off-request" data-i18n="off.dash.cta">طلب تشجير جديد</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="k" data-i18n="off.s1">أشجار موثّقة</div><div class="v">4,000</div></div>
+            <div class="stat"><div class="k" data-i18n="off.s2">CO₂ / سنة</div><div class="v">8,000 كغ</div></div>
+            <div class="stat"><div class="k" data-i18n="off.s3">طلبات نشطة</div><div class="v">2</div></div>
+            <div class="stat"><div class="k" data-i18n="off.s4">شهادات</div><div class="v">1 + 1</div></div>
+          </div>
+          <div class="panel">
+            <h2 data-i18n="off.track">متابعة الطلبات</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.id">الطلب</th>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.trees">أشجار</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1042</td><td data-i18n="land.asir">مرتفعات عسير</td><td>2,500</td>
+                  <td><span class="badge badge--wait" data-i18n="st.supply">قيد التوريد</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+                <tr>
+                  <td>#1038</td><td data-i18n="land.ahsa">واحة الأحساء</td><td>1,500</td>
+                  <td><span class="badge badge--ok" data-i18n="st.planted">زراعة معتمدة</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="off-lands" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.lands.h">فرص التشجير</h1>
+              <p data-i18n="off.lands.s">أراضٍ معتمدة مع الطاقة المتبقية — قائمة وخريطة.</p>
+            </div>
+          </div>
+          <div class="map-box" style="margin-bottom:18px">
+            <div class="map-pin" style="left:32%;top:55%" data-label="عسير"></div>
+            <div class="map-pin" style="left:62%;top:48%" data-label="الأحساء"></div>
+            <div class="map-pin" style="left:28%;top:28%" data-label="تبوك"></div>
+          </div>
+          <div class="land-grid">
+            <article class="land">
+              <div class="land__map"></div>
+              <div class="land__body">
+                <h3 data-i18n="land.asir">مرتفعات عسير</h3>
+                <div class="land__meta" data-i18n="land.asir.m">العرعر · متبقي 3,200 من 10,000</div>
+                <div class="bar"><i style="width:68%"></i></div>
+                <button type="button" class="btn btn--primary btn--sm" data-panel-target="off-request" data-i18n="off.pick">اختر للتشجير</button>
+              </div>
+            </article>
+            <article class="land">
+              <div class="land__map" style="filter:hue-rotate(40deg)"></div>
+              <div class="land__body">
+                <h3 data-i18n="land.ahsa">واحة الأحساء</h3>
+                <div class="land__meta" data-i18n="land.ahsa.m">النخيل · متبقي 8,400 من 20,000</div>
+                <div class="bar"><i style="width:42%"></i></div>
+                <button type="button" class="btn btn--primary btn--sm" data-panel-target="off-request" data-i18n="off.pick">اختر للتشجير</button>
+              </div>
+            </article>
+            <article class="land">
+              <div class="land__map" style="filter:hue-rotate(-20deg)"></div>
+              <div class="land__body">
+                <h3 data-i18n="land.tabuk">محمية تبوك</h3>
+                <div class="land__meta" data-i18n="land.tabuk.m">الطلح · متبقي 1,100 من 5,000</div>
+                <div class="bar"><i style="width:78%"></i></div>
+                <button type="button" class="btn btn--primary btn--sm" data-panel-target="off-request" data-i18n="off.pick">اختر للتشجير</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div data-panel-id="off-request" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.req.h">طلب تشجير</h1>
+              <p data-i18n="off.req.s">اختر الأرض وعدد الأشجار ضمن الطاقة المتبقية. التوكنات تُسكّ بعد اعتماد الزراعة.</p>
+            </div>
+          </div>
+          <div class="split">
+            <div class="panel form-box">
+              <h2 data-i18n="off.req.form">تفاصيل الطلب</h2>
+              <label data-i18n="th.land">الأرض</label>
+              <select>
+                <option data-i18n="land.asir">مرتفعات عسير</option>
+                <option data-i18n="land.ahsa">واحة الأحساء</option>
+              </select>
+              <label data-i18n="off.req.trees">عدد الأشجار</label>
+              <input type="number" id="treeQty" value="500" min="1" />
+              <label data-i18n="off.req.calc">حاسبة التعويض (اختياري)</label>
+              <input type="number" id="co2Need" placeholder="كغ CO₂ / سنة" />
+              <p style="font-size:.85rem;color:var(--slate);margin:8px 0 16px" data-i18n="off.req.hint">≈ 2.0 كغ لكل شجرة / سنة (مثال توضيحي)</p>
+              <button type="button" class="btn btn--primary" id="submitPlant" data-i18n="off.req.submit">إرسال الطلب</button>
+            </div>
+            <div class="impact">
+              <div style="opacity:.75;font-size:.85rem" data-i18n="off.req.impact">الأثر التقديري</div>
+              <div class="big" id="impactTrees">500</div>
+              <div data-i18n="off.req.treesLbl">شجرة للزراعة</div>
+              <div class="big" id="impactCo2" style="font-size:1.5rem;margin-top:16px">1,000 كغ</div>
+              <div style="opacity:.8;font-size:.9rem" data-i18n="off.req.co2Lbl">تعويض تقديري / سنة</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="off-reqs" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.reqs.h">طلباتي</h1>
+              <p data-i18n="off.reqs.s">جميع طلبات التشجير وحالاتها.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.id">الطلب</th>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.trees">أشجار</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1042</td><td data-i18n="land.asir">مرتفعات عسير</td><td>2,500</td>
+                  <td><span class="badge badge--wait" data-i18n="tl.supply">توريد</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+                <tr>
+                  <td>#1038</td><td data-i18n="land.ahsa">واحة الأحساء</td><td>1,500</td>
+                  <td><span class="badge badge--ok" data-i18n="tl.carbon">شهادة كربون</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+                <tr>
+                  <td>#1021</td><td data-i18n="land.tabuk">محمية تبوك</td><td>400</td>
+                  <td><span class="badge badge--ok" data-i18n="tl.tokens">توكنات</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="off-detail" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.detail.h">تفاصيل الطلب #1042</h1>
+              <p data-i18n="off.detail.s">مسار الحالة من الإنشاء حتى شهادة الكربون.</p>
+            </div>
+            <button type="button" class="btn btn--soft btn--sm" data-panel-target="off-reqs" data-i18n="off.back">رجوع للقائمة</button>
+          </div>
+          <div class="two-col">
+            <div class="panel">
+              <h2 data-i18n="off.detail.info">ملخص</h2>
+              <div class="detail-grid">
+                <div><div class="k" data-i18n="th.land">الأرض</div><div class="v" data-i18n="land.asir">مرتفعات عسير</div></div>
+                <div><div class="k" data-i18n="th.trees">أشجار</div><div class="v">2,500</div></div>
+                <div><div class="k" data-i18n="th.species">النوع</div><div class="v" data-i18n="sp.juniper">العرعر</div></div>
+                <div><div class="k" data-i18n="th.status">الحالة</div><div class="v" data-i18n="st.supply">قيد التوريد</div></div>
+              </div>
+            </div>
+            <div class="panel">
+              <h2 data-i18n="off.detail.tl">الخط الزمني</h2>
+              <div class="timeline">
+                <div class="timeline__item is-done"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.created">إنشاء</strong><span>2026-03-01</span></div></div>
+                <div class="timeline__item is-done"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.assigned">تعيين مشتل</strong><span>2026-03-02</span></div></div>
+                <div class="timeline__item is-now"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.supply">توريد</strong><span data-i18n="tl.now">جاري</span></div></div>
+                <div class="timeline__item"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.planted">مزروع</strong><span>—</span></div></div>
+                <div class="timeline__item"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.approved">اعتماد</strong><span>—</span></div></div>
+                <div class="timeline__item"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.tokens">توكنات</strong><span>—</span></div></div>
+                <div class="timeline__item"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.pcert">شهادة تشجير</strong><span>—</span></div></div>
+                <div class="timeline__item"><div class="timeline__dot"></div><div class="timeline__body"><strong data-i18n="tl.carbon">شهادة كربون</strong><span>—</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="off-certs" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.certs.h">الشهادات</h1>
+              <p data-i18n="off.certs.s">شهادة تشجير بعد الزراعة، ثم شهادة كربون بعد التحقق. ديناميكية من رصيد التوكنات.</p>
+            </div>
+          </div>
+          <div class="cert">
+            <div>
+              <h3 data-i18n="off.certs.plant">شهادة التشجير</h3>
+              <p data-i18n="off.certs.plant.p">4,000 شجرة · مرتفعات عسير · معتمدة</p>
+              <button type="button" class="btn btn--soft btn--sm" data-mock="pdf" data-i18n="off.certs.pdf">تحميل PDF</button>
+            </div>
+            <div class="qr" title="QR"></div>
+          </div>
+          <div class="cert">
+            <div>
+              <h3 data-i18n="off.certs.carbon">شهادة الكربون</h3>
+              <p data-i18n="off.certs.carbon.p">8,000 كغ CO₂ / سنة · آخر تدقيق: 2026</p>
+              <button type="button" class="btn btn--soft btn--sm" data-mock="pdf" data-i18n="off.certs.pdf">تحميل PDF</button>
+            </div>
+            <div class="qr" title="QR"></div>
+          </div>
+        </div>
+
+        <div data-panel-id="off-market" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.market.h">السوق الثانوية</h1>
+              <p data-i18n="off.market.s">تداول بين مستخدمين متحقَّق منهم فقط. المنصة لا تبيع التوكنات.</p>
+            </div>
+            <button type="button" class="btn btn--soft btn--sm" data-panel-target="off-sell" data-i18n="off.market.list">عرض توكنات للبيع</button>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.qty">الكمية</th>
+                  <th data-i18n="th.price">السعر</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="land.asir">مرتفعات عسير</td>
+                  <td>200</td>
+                  <td>45 SAR</td>
+                  <td><button type="button" class="btn btn--primary btn--sm" data-mock="buy" data-i18n="off.market.buy">قبول</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="land.tabuk">محمية تبوك</td>
+                  <td>80</td>
+                  <td>52 SAR</td>
+                  <td><button type="button" class="btn btn--primary btn--sm" data-mock="buy" data-i18n="off.market.buy">قبول</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="off-sell" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.sell.h">عرض توكنات للبيع</h1>
+              <p data-i18n="off.sell.s">أدرج كمية وسعرًا من رصيدك على أرض محددة.</p>
+            </div>
+            <button type="button" class="btn btn--ghost btn--sm" data-panel-target="off-market" data-i18n="off.back">رجوع</button>
+          </div>
+          <div class="panel form-box" style="max-width:480px">
+            <label data-i18n="th.land">الأرض</label>
+            <select>
+              <option data-i18n="land.asir">مرتفعات عسير</option>
+              <option data-i18n="land.ahsa">واحة الأحساء</option>
+            </select>
+            <label data-i18n="th.qty">الكمية</label>
+            <input type="number" value="100" />
+            <label data-i18n="th.price">السعر (SAR)</label>
+            <input type="number" value="48" />
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="list" data-i18n="off.sell.submit">نشر العرض</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="off-profile" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="off.profile.h">الملف والإشعارات</h1>
+              <p data-i18n="off.profile.s">بيانات الحساب وتنبيهات حالة الطلبات.</p>
+            </div>
+          </div>
+          <div class="two-col">
+            <div class="panel form-box">
+              <h2 data-i18n="off.profile.info">الملف</h2>
+              <label data-i18n="off.profile.name">الاسم / الجهة</label>
+              <input type="text" value="شركة النور" />
+              <label data-i18n="auth.email">البريد الإلكتروني</label>
+              <input type="email" value="demo@tge.sa" />
+              <label data-i18n="wallet.mm">المحفظة</label>
+              <input type="text" value="0x3a…9f2c" readonly />
+              <div style="margin-top:16px">
+                <button type="button" class="btn btn--primary" data-mock="save" data-i18n="off.profile.save">حفظ</button>
+              </div>
+            </div>
+            <div class="panel">
+              <h2 data-i18n="off.profile.notif">الإشعارات</h2>
+              <table class="table">
+                <tbody>
+                  <tr><td data-i18n="notif.1">طلب #1042: تم تعيين المشتل</td><td><span class="badge badge--wait">جديد</span></td></tr>
+                  <tr><td data-i18n="notif.2">شهادة الكربون جاهزة لـ #1038</td><td><span class="badge badge--ok">✓</span></td></tr>
+                  <tr><td data-i18n="notif.3">عرض سوق منتهي الصلاحية</td><td><span class="badge">—</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LAND OWNER ========== -->
+  <section class="view" id="view-landowner">
+    <div class="app-shell">
+      <aside class="side">
+        <div class="side__user">
+          <strong data-i18n="lo.user">مزارع السراة</strong>
+          <span data-i18n="lo.role">صاحب أرض · معتمد</span>
+        </div>
+        <button type="button" class="is-on" data-panel-target="lo-lands" data-i18n="lo.nav.lands">أراضيّ</button>
+        <button type="button" data-panel-target="lo-new" data-i18n="lo.nav.new">تسجيل أرض</button>
+        <button type="button" data-panel-target="lo-detail" data-i18n="lo.nav.detail">تفاصيل الأرض</button>
+        <button type="button" data-panel-target="lo-notif" data-i18n="lo.nav.notif">الإشعارات</button>
+      </aside>
+      <div class="main">
+        <div data-panel-id="lo-lands">
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="lo.h">أراضيّ المسجّلة</h1>
+              <p data-i18n="lo.s">الأرض تبقى ملكك. التوكن (ERC-721) سجل رقمي فقط ولا ينقل الملكية.</p>
+            </div>
+            <button type="button" class="btn btn--primary btn--sm" data-panel-target="lo-new" data-i18n="lo.cta">تسجيل أرض جديدة</button>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.cap">الطاقة</th>
+                  <th data-i18n="th.planted">مزروع</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="land.asir">مرتفعات عسير</td>
+                  <td>10,000</td>
+                  <td>6,800</td>
+                  <td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="lo-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="land.new">قطعة الباحة</td>
+                  <td>4,000</td>
+                  <td>—</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="lo-detail" data-i18n="off.open">فتح</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="lo-new" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="lo.form">تسجيل أرض</h1>
+              <p data-i18n="lo.form.s">إحداثيات، مساحة، طاقة استيعابية، ووثائق.</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:560px">
+            <label data-i18n="lo.name">اسم / وصف القطعة</label>
+            <input type="text" />
+            <label data-i18n="lo.coords">الإحداثيات</label>
+            <input type="text" placeholder="18.216 · 42.505" />
+            <label data-i18n="lo.area">المساحة (م²)</label>
+            <input type="number" />
+            <label data-i18n="lo.capacity">الطاقة الاستيعابية (أشجار)</label>
+            <input type="number" />
+            <label data-i18n="lo.docs">وثائق الملكية / التفويض</label>
+            <input type="file" />
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="land" data-i18n="lo.submit">إرسال للاعتماد</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="lo-detail" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="land.asir">مرتفعات عسير</h1>
+              <p data-i18n="lo.detail.s">الطاقة المتبقية ونشاط التشجير على هذه القطعة.</p>
+            </div>
+            <button type="button" class="btn btn--soft btn--sm" data-panel-target="lo-lands" data-i18n="off.back">رجوع</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="k" data-i18n="th.cap">الطاقة</div><div class="v">10,000</div></div>
+            <div class="stat"><div class="k" data-i18n="th.planted">مزروع</div><div class="v">6,800</div></div>
+            <div class="stat"><div class="k" data-i18n="lo.remain">متبقي</div><div class="v">3,200</div></div>
+            <div class="stat"><div class="k" data-i18n="off.s3">طلبات نشطة</div><div class="v">1</div></div>
+          </div>
+          <div class="bar" style="margin-bottom:18px;height:10px"><i style="width:68%"></i></div>
+          <div class="panel">
+            <h2 data-i18n="lo.activity">نشاط التشجير</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.id">الطلب</th>
+                  <th data-i18n="th.trees">أشجار</th>
+                  <th data-i18n="th.status">الحالة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>#1042</td><td>2,500</td><td><span class="badge badge--wait" data-i18n="st.supply">قيد التوريد</span></td></tr>
+                <tr><td>#0988</td><td>4,300</td><td><span class="badge badge--ok" data-i18n="st.planted">زراعة معتمدة</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="lo-notif" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="lo.nav.notif">الإشعارات</h1>
+              <p data-i18n="lo.notif.s">تحديثات اعتماد الأراضي ونشاط الزراعة.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <tbody>
+                <tr><td data-i18n="lo.n1">قطعة الباحة قيد المراجعة</td><td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td></tr>
+                <tr><td data-i18n="lo.n2">طلب تشجير جديد على مرتفعات عسير</td><td><span class="badge badge--ok">جديد</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NURSERY ========== -->
+  <section class="view" id="view-nursery">
+    <div class="app-shell">
+      <aside class="side">
+        <div class="side__user">
+          <strong data-i18n="nu.user">مشتل الجنوب</strong>
+          <span data-i18n="nu.role">مشتل · معتمد</span>
+        </div>
+        <button type="button" class="is-on" data-panel-target="nu-stock" data-i18n="nu.nav.stock">المخزون</button>
+        <button type="button" data-panel-target="nu-species" data-i18n="nu.nav.species">إضافة / تعديل نوع</button>
+        <button type="button" data-panel-target="nu-orders" data-i18n="nu.nav.orders">طلبات التوريد</button>
+        <button type="button" data-panel-target="nu-delivery" data-i18n="nu.nav.delivery">حالة التسليم</button>
+        <button type="button" data-panel-target="nu-proof" data-i18n="nu.nav.proof">إثبات الزراعة</button>
+      </aside>
+      <div class="main">
+        <div data-panel-id="nu-stock">
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="nu.h">لوحة المشتل</h1>
+              <p data-i18n="nu.s">عرض الأنواع والكميات ومناطق التوريد، وقبول طلبات التشجير.</p>
+            </div>
+            <button type="button" class="btn btn--primary btn--sm" data-panel-target="nu-species" data-i18n="nu.add">إضافة نوع</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="k" data-i18n="nu.s1">أنواع متاحة</div><div class="v">6</div></div>
+            <div class="stat"><div class="k" data-i18n="nu.s2">طلبات جديدة</div><div class="v">3</div></div>
+            <div class="stat"><div class="k" data-i18n="nu.s3">قيد التجهيز</div><div class="v">1</div></div>
+            <div class="stat"><div class="k" data-i18n="nu.s4">تم التسليم</div><div class="v">12</div></div>
+          </div>
+          <div class="panel">
+            <h2 data-i18n="nu.stock">قائمة الأشجار</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.species">النوع</th>
+                  <th data-i18n="th.qty">الكمية</th>
+                  <th data-i18n="th.zones">مناطق التوريد</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="sp.juniper">العرعر</td><td>12,000</td><td data-i18n="z.south">الجنوب</td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="nu-species" data-i18n="nu.edit">تعديل</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="sp.palm">النخيل</td><td>8,500</td><td data-i18n="z.east">الشرقية</td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="nu-species" data-i18n="nu.edit">تعديل</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="sp.acacia">الطلح</td><td>15,200</td><td data-i18n="z.north">الشمال</td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="nu-species" data-i18n="nu.edit">تعديل</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="nu-species" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="nu.species.h">إضافة / تعديل نوع</h1>
+              <p data-i18n="nu.species.s">اسم النوع، الكمية، ومناطق التوريد.</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:480px">
+            <label data-i18n="th.species">النوع</label>
+            <input type="text" value="العرعر" />
+            <label data-i18n="th.qty">الكمية</label>
+            <input type="number" value="12000" />
+            <label data-i18n="th.zones">مناطق التوريد</label>
+            <input type="text" value="الجنوب" />
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="species" data-i18n="nu.species.save">حفظ</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="nu-orders" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="nu.orders">طلبات التوريد</h1>
+              <p data-i18n="nu.orders.s">طلبات التشجير المعيّنة لمشتلكم.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.id">الطلب</th>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.trees">أشجار</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1042</td>
+                  <td data-i18n="land.asir">مرتفعات عسير</td>
+                  <td>2,500 عرعر</td>
+                  <td><span class="badge badge--wait" data-i18n="st.new">جديد</span></td>
+                  <td>
+                    <button type="button" class="btn btn--primary btn--sm" data-panel-target="nu-delivery" data-i18n="nu.accept">قبول</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>#1035</td>
+                  <td data-i18n="land.tabuk">محمية تبوك</td>
+                  <td>800 طلح</td>
+                  <td><span class="badge badge--wait" data-i18n="nu.s3">قيد التجهيز</span></td>
+                  <td>
+                    <button type="button" class="btn btn--soft btn--sm" data-panel-target="nu-delivery" data-i18n="nu.update">تحديث</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="nu-delivery" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="nu.delivery.h">تحديث حالة التسليم</h1>
+              <p data-i18n="nu.delivery.s">مقبول · قيد التجهيز · تم التسليم</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:480px">
+            <label data-i18n="th.id">الطلب</label>
+            <select><option>#1042 · مرتفعات عسير</option><option>#1035 · محمية تبوك</option></select>
+            <label data-i18n="th.status">الحالة</label>
+            <select>
+              <option data-i18n="nu.st.accept">مقبول</option>
+              <option data-i18n="nu.s3">قيد التجهيز</option>
+              <option data-i18n="nu.s4">تم التسليم</option>
+            </select>
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="delivery" data-i18n="nu.delivery.save">حفظ الحالة</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="nu-proof" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="nu.proof.h">رفع إثبات الزراعة</h1>
+              <p data-i18n="nu.proof.s">صور، إحداثيات، تاريخ، وعدد الأشجار المزروعة.</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:520px">
+            <label data-i18n="th.id">الطلب</label>
+            <select><option>#1035 · محمية تبوك</option></select>
+            <label data-i18n="nu.proof.photos">الصور</label>
+            <input type="file" multiple accept="image/*" />
+            <label data-i18n="lo.coords">الإحداثيات</label>
+            <input type="text" placeholder="28.383 · 36.566" />
+            <label data-i18n="nu.proof.date">تاريخ الزراعة</label>
+            <input type="date" value="2026-03-10" />
+            <label data-i18n="th.trees">عدد الأشجار</label>
+            <input type="number" value="800" />
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="proof" data-i18n="nu.proof.submit">رفع الإثبات</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ADMIN ========== -->
+  <section class="view" id="view-admin">
+    <div class="app-shell">
+      <aside class="side">
+        <div class="side__user">
+          <strong>TGE Admin</strong>
+          <span data-i18n="ad.role">فريق الإدارة</span>
+        </div>
+        <button type="button" class="is-on" data-panel-target="ad-queue" data-i18n="ad.nav.queue">طابور الاعتماد</button>
+        <button type="button" data-panel-target="ad-users" data-i18n="ad.nav.users">المستخدمون</button>
+        <button type="button" data-panel-target="ad-lands" data-i18n="ad.nav.lands">الأراضي</button>
+        <button type="button" data-panel-target="ad-assign" data-i18n="ad.nav.assign">تعيين مشتل</button>
+        <button type="button" data-panel-target="ad-market" data-i18n="ad.nav.market">ضوابط السوق</button>
+        <button type="button" data-panel-target="ad-audits" data-i18n="ad.nav.audits">التدقيق</button>
+        <button type="button" data-panel-target="ad-reports" data-i18n="ad.nav.reports">التقارير</button>
+        <button type="button" data-panel-target="ad-settings" data-i18n="ad.nav.settings">إعدادات المنصة</button>
+      </aside>
+      <div class="main">
+        <div data-panel-id="ad-queue">
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.h">لوحة إدارة TGE</h1>
+              <p data-i18n="ad.s">اعتماد المستخدمين والأراضي والزراعة · سكّ التوكنات · تقارير.</p>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="k" data-i18n="ad.s1">مستخدمون بانتظار</div><div class="v">5</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.s2">أراضٍ للمراجعة</div><div class="v">2</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.s3">زراعة للاعتماد</div><div class="v">1</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.s4">أراضٍ معتمدة</div><div class="v">18</div></div>
+          </div>
+          <div class="panel">
+            <h2 data-i18n="ad.queue">طابور الاعتماد</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.type">النوع</th>
+                  <th data-i18n="th.item">البند</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="ad.t.land">أرض</td>
+                  <td data-i18n="land.new">قطعة الباحة</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td>
+                    <button type="button" class="btn btn--primary btn--sm" data-mock="approve" data-i18n="ad.approve">اعتماد</button>
+                    <button type="button" class="btn btn--ghost btn--sm" data-mock="reject" data-i18n="ad.reject">رفض</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="ad.t.plant">زراعة</td>
+                  <td>#1038 · 1,500</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td>
+                    <button type="button" class="btn btn--primary btn--sm" data-mock="mint" data-i18n="ad.mint">اعتماد وسكّ</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="ad.t.user">جهة</td>
+                  <td>مشتل الشمال</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td>
+                    <button type="button" class="btn btn--primary btn--sm" data-mock="approve" data-i18n="ad.approve">اعتماد</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-users" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.users.h">إدارة المستخدمين</h1>
+              <p data-i18n="ad.users.s">عرض الأدوار وحالة الاعتماد.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.item">المستخدم</th>
+                  <th data-i18n="th.type">الدور</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td data-i18n="off.user">شركة النور</td><td data-i18n="auth.role.off">معوِّض</td><td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td><td><button type="button" class="btn btn--ghost btn--sm" data-i18n="nu.edit">تعديل</button></td></tr>
+                <tr><td>مشتل الشمال</td><td data-i18n="auth.role.nur">مشتل</td><td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td><td><button type="button" class="btn btn--primary btn--sm" data-mock="approve" data-i18n="ad.approve">اعتماد</button></td></tr>
+                <tr><td data-i18n="lo.user">مزارع السراة</td><td data-i18n="auth.role.land">صاحب أرض</td><td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td><td><button type="button" class="btn btn--ghost btn--sm" data-i18n="nu.edit">تعديل</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-lands" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.lands.h">إدارة الأراضي</h1>
+              <p data-i18n="ad.lands.s">اعتماد / رفض، أو تسجيل أرض نيابة عن المالك.</p>
+            </div>
+            <button type="button" class="btn btn--soft btn--sm" data-panel-target="ad-regland" data-i18n="ad.lands.reg">تسجيل نيابة</button>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.cap">الطاقة</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="land.new">قطعة الباحة</td><td>4,000</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td>
+                    <button type="button" class="btn btn--primary btn--sm" data-mock="approve" data-i18n="ad.approve">اعتماد</button>
+                    <button type="button" class="btn btn--ghost btn--sm" data-mock="reject" data-i18n="ad.reject">رفض</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="land.asir">مرتفعات عسير</td><td>10,000</td>
+                  <td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-i18n="off.open">عرض</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-regland" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.lands.reg">تسجيل أرض نيابة عن المالك</h1>
+              <p data-i18n="ad.lands.reg.s">نفس حقول تسجيل الأرض مع اختيار المالك.</p>
+            </div>
+            <button type="button" class="btn btn--ghost btn--sm" data-panel-target="ad-lands" data-i18n="off.back">رجوع</button>
+          </div>
+          <div class="panel form-box" style="max-width:560px">
+            <label data-i18n="ad.owner">صاحب الأرض</label>
+            <select><option data-i18n="lo.user">مزارع السراة</option></select>
+            <label data-i18n="lo.name">اسم / وصف القطعة</label>
+            <input type="text" />
+            <label data-i18n="lo.coords">الإحداثيات</label>
+            <input type="text" />
+            <label data-i18n="lo.capacity">الطاقة الاستيعابية (أشجار)</label>
+            <input type="number" />
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="land" data-i18n="lo.submit">إرسال للاعتماد</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-assign" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.assign.h">تعيين مشتل لطلب تشجير</h1>
+              <p data-i18n="ad.assign.s">اربط طلبًا بمشتل معتمد حسب المنطقة والأنواع.</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:480px">
+            <label data-i18n="th.id">الطلب</label>
+            <select><option>#1042 · مرتفعات عسير · 2,500</option></select>
+            <label data-i18n="auth.role.nur">المشتل</label>
+            <select>
+              <option data-i18n="nu.user">مشتل الجنوب</option>
+              <option>مشتل الشمال</option>
+            </select>
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="assign" data-i18n="ad.assign.cta">تعيين</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-market" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.market.h">ضوابط السوق الثانوية</h1>
+              <p data-i18n="ad.market.s">إيقاف التداول على أرض معينة عند الحاجة.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="th.status">التداول</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="land.asir">مرتفعات عسير</td>
+                  <td><span class="badge badge--ok" data-i18n="ad.market.open">مفتوح</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-mock="pause" data-i18n="ad.market.pause">إيقاف</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="land.tabuk">محمية تبوك</td>
+                  <td><span class="badge badge--wait" data-i18n="ad.market.paused">موقوف</span></td>
+                  <td><button type="button" class="btn btn--primary btn--sm" data-mock="resume" data-i18n="ad.market.resume">استئناف</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-audits" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.audits.h">جدول التدقيق والسجل</h1>
+              <p data-i18n="ad.audits.s">جدولة زيارات التدقيق وعرض السجل السابق.</p>
+            </div>
+          </div>
+          <div class="two-col">
+            <div class="panel form-box">
+              <h2 data-i18n="ad.audits.sched">جدولة</h2>
+              <label data-i18n="th.land">الأرض</label>
+              <select><option data-i18n="land.ahsa">واحة الأحساء</option></select>
+              <label data-i18n="auth.role.aud">المدقق</label>
+              <select><option>Auditor Demo</option></select>
+              <label data-i18n="nu.proof.date">التاريخ</label>
+              <input type="date" value="2026-04-15" />
+              <div style="margin-top:16px">
+                <button type="button" class="btn btn--primary" data-mock="audit" data-i18n="ad.audits.save">حفظ الجدولة</button>
+              </div>
+            </div>
+            <div class="panel">
+              <h2 data-i18n="ad.audits.hist">السجل</h2>
+              <table class="table">
+                <tbody>
+                  <tr><td data-i18n="land.asir">مرتفعات عسير</td><td>2025-11</td><td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td></tr>
+                  <tr><td data-i18n="land.ahsa">واحة الأحساء</td><td>2026-01</td><td><span class="badge badge--ok" data-i18n="st.approved">معتمدة</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-reports" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.reports.h">لوحة التقارير</h1>
+              <p data-i18n="ad.reports.s">ملخص تشغيل المنصة — أرقام تصميمية.</p>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="k" data-i18n="ad.r1">أشجار مزروعة</div><div class="v">42,800</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.r2">توكنات مسكوكة</div><div class="v">38,200</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.r3">صفقات سوق</div><div class="v">126</div></div>
+            <div class="stat"><div class="k" data-i18n="ad.r4">CO₂ مقدّر</div><div class="v">76 طن</div></div>
+          </div>
+          <div class="panel">
+            <p data-i18n="ad.reports.note">رسوم بيانية وتصدير CSV ستكون في الإصدار التشغيلي — هذا ملخص تصميم.</p>
+          </div>
+        </div>
+
+        <div data-panel-id="ad-settings" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="ad.settings.h">إعدادات المنصة</h1>
+              <p data-i18n="ad.settings.s">معاملات عامة (تصميم فقط).</p>
+            </div>
+          </div>
+          <div class="panel form-box" style="max-width:480px">
+            <label data-i18n="ad.settings.co2">كغ CO₂ / شجرة / سنة</label>
+            <input type="number" value="2.0" step="0.1" />
+            <label data-i18n="ad.settings.fee">رسوم المنصة %</label>
+            <input type="number" value="2.5" step="0.1" />
+            <label data-i18n="ad.settings.chain">الشبكة</label>
+            <select><option>Polygon Amoy (test)</option><option>Ethereum</option></select>
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="settings" data-i18n="off.profile.save">حفظ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AUDITOR ========== -->
+  <section class="view" id="view-auditor">
+    <div class="app-shell">
+      <aside class="side">
+        <div class="side__user">
+          <strong data-i18n="au.user">مدقق مستقل</strong>
+          <span data-i18n="au.role">مدقق · معتمد</span>
+        </div>
+        <button type="button" class="is-on" data-panel-target="au-pending" data-i18n="au.nav.pending">أراضٍ بانتظار التدقيق</button>
+        <button type="button" data-panel-target="au-submit" data-i18n="au.nav.submit">تحديث تدقيق</button>
+      </aside>
+      <div class="main">
+        <div data-panel-id="au-pending">
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="au.pending.h">أراضٍ بانتظار التدقيق</h1>
+              <p data-i18n="au.pending.s">راجع المواقع المجدولة وقدّم تحديث عدد الأشجار وأرصدة الكربون.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th data-i18n="th.land">الأرض</th>
+                  <th data-i18n="nu.proof.date">الموعد</th>
+                  <th data-i18n="th.status">الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="land.ahsa">واحة الأحساء</td>
+                  <td>2026-04-15</td>
+                  <td><span class="badge badge--wait" data-i18n="st.review">قيد المراجعة</span></td>
+                  <td><button type="button" class="btn btn--primary btn--sm" data-panel-target="au-submit" data-i18n="au.start">بدء التحديث</button></td>
+                </tr>
+                <tr>
+                  <td data-i18n="land.asir">مرتفعات عسير</td>
+                  <td>2026-05-01</td>
+                  <td><span class="badge" data-i18n="au.scheduled">مجدول</span></td>
+                  <td><button type="button" class="btn btn--ghost btn--sm" data-panel-target="au-submit" data-i18n="off.open">فتح</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div data-panel-id="au-submit" hidden>
+          <div class="page-head">
+            <div>
+              <h1 data-i18n="au.submit.h">تحديث تدقيق</h1>
+              <p data-i18n="au.submit.s">عدد الأشجار المقاسة وأرصدة الكربون المقدّرة.</p>
+            </div>
+            <button type="button" class="btn btn--soft btn--sm" data-panel-target="au-pending" data-i18n="off.back">رجوع</button>
+          </div>
+          <div class="panel form-box" style="max-width:520px">
+            <label data-i18n="th.land">الأرض</label>
+            <select>
+              <option data-i18n="land.ahsa">واحة الأحساء</option>
+              <option data-i18n="land.asir">مرتفعات عسير</option>
+            </select>
+            <label data-i18n="au.trees">عدد الأشجار (عدّ ميداني)</label>
+            <input type="number" value="1480" />
+            <label data-i18n="au.carbon">أرصدة الكربون (كغ CO₂ / سنة)</label>
+            <input type="number" value="2960" />
+            <label data-i18n="au.notes">ملاحظات</label>
+            <textarea rows="3" style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;resize:vertical"></textarea>
+            <div style="margin-top:16px">
+              <button type="button" class="btn btn--primary" data-mock="auditSubmit" data-i18n="au.submit.cta">إرسال التحديث</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="design-tag">DESIGN ONLY · BRD</div>
+  <div class="toast" id="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
